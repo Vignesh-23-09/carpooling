@@ -1,0 +1,5 @@
+node_modules
+smartride/**/*.txt
+smartride/**/*md
+smartride/**/*.log
+smartride-frontend/**/*.log

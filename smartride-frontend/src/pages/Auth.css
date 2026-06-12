@@ -1,0 +1,266 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 40px;
+  position: relative;
+}
+
+.auth-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: var(--bg);
+}
+.auth-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 10%, var(--accent-glow), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 10% 80%, var(--accent-glow-sub), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 90% 90%, var(--accent-glow), transparent 50%);
+  z-index: 1;
+}
+
+.auth-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), var(--shadow);
+}
+
+.auth-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.auth-title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.auth-sub {
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 28px;
+}
+
+/* Role Toggle */
+.role-toggle {
+  display: flex;
+  gap: 8px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 4px;
+  margin-bottom: 28px;
+}
+
+.role-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  background: transparent;
+  color: var(--text2);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.role-btn.active {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 4px 12px var(--shadow-accent);
+}
+
+.auth-form { display: flex; flex-direction: column; gap: 18px; }
+
+.form-group { display: flex; flex-direction: column; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.input-wrap { position: relative; }
+
+.input-icon {
+  position: absolute;
+  left: 12px; top: 50%; transform: translateY(-50%);
+  color: var(--text2);
+  pointer-events: none;
+}
+
+.input-toggle {
+  position: absolute;
+  right: 12px; top: 50%; transform: translateY(-50%);
+  background: none;
+  color: var(--text2);
+  padding: 0;
+}
+.input-toggle:hover { color: var(--text); }
+
+.pl-icon { padding-left: 42px !important; }
+.pr-icon { padding-right: 42px !important; }
+
+/* Driver Fields */
+.driver-fields {
+  background: var(--glass-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.driver-fields-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent3);
+}
+
+.auth-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 14px;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.auth-footer {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text2);
+  margin-top: 20px;
+}
+.auth-footer a {
+  color: var(--accent);
+  font-weight: 600;
+}
+.auth-footer a:hover { color: var(--accent2); }
+
+/* OTP Page */
+.otp-inputs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.otp-input {
+  width: 52px; height: 56px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+.otp-input:focus {
+  border-color: var(--accent);
+  background: var(--glass-bg);
+  box-shadow: 0 0 0 3px var(--shadow-accent);
+}
+
+.otp-email {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 8px;
+}
+
+.otp-email strong { color: var(--accent); }
+
+.otp-resend {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text2);
+  margin-top: 12px;
+}
+.otp-resend button {
+  background: none;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+}
+.otp-resend button:hover { color: var(--accent2); }
+
+/* Success state */
+.success-icon {
+  width: 64px; height: 64px;
+  background: rgba(34,197,94,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  margin: 0 auto 20px;
+}
+
+/* Sandy Loading Animation Overlay */
+.sandy-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+  will-change: opacity;
+}
+
+.sandy-container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.sandy-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  text-align: center;
+  animation: pulse 1.5s infinite ease-in-out;
+  will-change: transform, opacity;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}

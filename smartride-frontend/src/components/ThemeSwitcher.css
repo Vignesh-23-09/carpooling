@@ -1,0 +1,38 @@
+.theme-switcher {
+    display: inline-flex;
+}
+
+.theme-dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    margin: 0 12px;
+    color: var(--text);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.theme-dropdown-btn:hover {
+    background: var(--bg3);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.theme-dropdown-btn svg {
+    color: var(--accent);
+}
+
+.theme-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

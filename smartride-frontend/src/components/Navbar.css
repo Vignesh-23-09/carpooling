@@ -1,0 +1,77 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 64px;
+  background: var(--bg); /* Use theme bg instead of glass */
+  border-bottom: 1px solid var(--border);
+  will-change: transform;
+  transform: translateZ(0);
+  contain: layout style;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.logo-icon { color: var(--accent); }
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-middle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-link {
+  font-size: 14px;
+  color: var(--text2);
+  font-weight: 500;
+  transition: color 0.2s;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+.navbar-link:hover { color: var(--text); background: var(--bg3); }
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text2);
+  background: var(--bg3);
+  padding: 6px 12px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+}
+
+.role-chip {
+  background: var(--accent-glow);
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 100px;
+  letter-spacing: 0.05em;
+}
+
+.navbar-logout {
+  padding: 8px 16px;
+  font-size: 13px;
+}
